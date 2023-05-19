@@ -1,0 +1,36 @@
+<form [formGroup]="registerForm" (ngSubmit)="getFormData(registerForm)" class="w-75 m-auto py-5 ">
+
+  <div class="form-group">
+    <label>First Name : </label>
+    <input formControlName='firstName' class="form-control" type="text">
+    <span *ngIf="registerForm.get('firstName')?.invalid == true" class="d-block p-2 text-danger">First Name Not
+      Valid</span>
+  </div>
+
+  <div class="form-group">
+    <label>Last Name : </label>
+    <input formControlName='lastName' class="form-control" type="text">
+    <span *ngIf="registerForm.get('lastName')?.invalid " class="d-block p-2 text-danger">Last Name Not Valid</span>
+  </div>
+
+  <div class="form-group">
+    <label>Age : </label>
+    <input formControlName='age' class="form-control" type="number">
+    <span *ngIf="registerForm.get('age')?.invalid " class="d-block p-2 text-danger">Age Not Valid</span>
+  </div>
+
+  <div class="form-group">
+    <label>E-mail : </label>
+    <input formControlName='email' class="form-control" type="email">
+    <span *ngIf="registerForm.get('email')?.invalid" class="d-block p-2 text-danger">E-mail Not Valid</span>
+  </div>
+
+  <div class="form-group">
+    <label>Password : </label>
+    <input formControlName='password' class="form-control" type="password">
+    <span *ngIf="registerForm.get('password')?.invalid" class="d-block p-2 text-danger">Password Not Valid</span>
+  </div>
+
+
+  <button [disabled]='!registerForm.valid' type="submit" class="btn btn-info">Register</button>
+</form>

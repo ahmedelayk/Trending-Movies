@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+$bgColor : #131722;
+$lightBgColor : #24baef;
+$bgTransparent : rgba(36, 186, 239, 0.6);
+$fontColor : #fff;
+$secondFontColor : #949cb0;
+$borderHeight : 1px;
+$borderColor : #a8a8a83d;
+
+body
+{
+    font-family: segoe ui light;
+    color:$fontColor ;
+    background-color: $bgColor;
+}
+.bgMain {
+    background-color: $bgColor;
+}
+
+.bgLight {
+    background-color: $lightBgColor;
+}
+
+.a {
+    color: $fontColor;
+}
+
+.secondFontColor {
+    color: $secondFontColor;
+}
+
+.btn-mine {
+    background-color: $lightBgColor;
+    color: $fontColor;
+}
